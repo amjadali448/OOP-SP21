@@ -1,0 +1,59 @@
+const { isUtf8 } = require('buffer');
+const { error } = require('console');
+const fs = require('fs');
+//creating and writing to a file
+// fs.writeFile('example.txt','This is an example',(error)=>{
+//     if (error)
+//     {
+//         console.log(error);
+//     }
+//     else
+//     {
+//         console.log("File Successfully Created");
+//         fs.readFile('example.txt','Utf-8',(error,file)=>{
+//             if (error)
+//             {
+//                 console.log(error);
+//             }
+//             else
+//             {
+//                 console.log(file);
+//             }
+//         });
+//     }
+// });
+
+// renaming the file
+// fs.rename('example.txt','example2.txt',(error)=>{
+//     if (error)
+//     {
+//         console.log(error);
+//     }
+//     else{
+//         console.log("Successfully Renamed the file");
+//     }
+// });
+
+//appending to a file
+// fs.appendFile('example2.txt','Some data Appended',(error)=>{
+//     if (error)
+//     {
+//         console.log(error);
+//     }
+//     else
+//     {
+//         console.log("data appended successfully");
+//     }
+// });
+
+// Deleting a file
+fs.unlink('example2.txt',(error)=>{
+    if (error)
+    {
+        console.log(error);
+    }
+    else
+    {
+        console.log("File Successfully Deleted");
+    }
+});
